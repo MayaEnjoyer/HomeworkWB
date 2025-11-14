@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Overflow – CSS Layout Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">CSS</div>
+                <div class="brand-text">
+                    <span class="brand-title">CSS Layout Lab</span>
+                    <span class="brand-subtitle">Overflow</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="blocks-inline.html">Block vs Inline</a>
+                <a href="display-box-sizing.html">Display &amp; Box</a>
+                <a href="float-clear.html">Float &amp; Clear</a>
+                <a href="positioning.html">Positioning</a>
+                <a href="normalize-reset.html">Normalize / Reset</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header">
+            <h1 class="page-title">Overflow</h1>
+            <p class="page-intro">
+                Тут ми створюємо контейнер з обмеженими розмірами і дивимося,
+                як <code class="code-inline">overflow</code> керує відображенням
+                вмісту, який виходить за межі.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо</div>
+            <h2 class="section-title">visible, hidden, scroll</h2>
+            <p class="section-subtitle">
+                У всіх блоків однакова висота, але тексту більше, ніж може поміститись.
+            </p>
+
+            <div class="demo-area">
+                <div class="overflow-grid">
+                    <div class="overflow-box">
+                        <div class="overflow-box-header">
+                            <span>За замовчуванням</span>
+                            <span class="display-badge">overflow: visible</span>
+                        </div>
+                        <div class="overflow-content overflow-content--visible">
+                            Це контейнер з обмеженою висотою. Коли тексту стає надто багато,
+                            він продовжує виходити за межі блоку, і ми бачимо «витік» контенту
+                            назовні, що іноді ламає макет.
+                        </div>
+                    </div>
+
+                    <div class="overflow-box">
+                        <div class="overflow-box-header">
+                            <span>Прихований контент</span>
+                            <span class="display-badge">overflow: hidden</span>
+                        </div>
+                        <div class="overflow-content overflow-content--hidden">
+                            Тут надлишковий текст просто обрізається. Частина вмісту є,
+                            але користувач її не бачить, бо блок не показує нічого, що
+                            виходить за його кордони. У деяких випадках це потрібно
+                            для чистого, «зрізаного» дизайну.
+                        </div>
+                    </div>
+
+                    <div class="overflow-box">
+                        <div class="overflow-box-header">
+                            <span>Прокрутка</span>
+                            <span class="display-badge">overflow: auto</span>
+                        </div>
+                        <div class="overflow-content overflow-content--scroll">
+                            Тут для надлишкового контенту зʼявляється смуга прокрутки
+                            (там, де це потрібно). Користувач може переглянути весь текст
+                            всередині контейнера, але сам контейнер зберігає фіксовану
+                            висоту і не розтягує макет. Такий підхід часто використовують
+                            для списків, таблиць і бокових панелей.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">Overflow • CSS Layout Lab</p>
+    </footer>
+</div>
+</body>
+</html>

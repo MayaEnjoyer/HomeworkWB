@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Layout Lab – Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">CSS</div>
+                <div class="brand-text">
+                    <span class="brand-title">CSS Layout Lab</span>
+                    <span class="brand-subtitle">HTML &amp; CSS playground</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="blocks-inline.html">Block vs Inline</a>
+                <a href="display-box-sizing.html">Display &amp; Box</a>
+                <a href="float-clear.html">Float &amp; Clear</a>
+                <a href="overflow.html">Overflow</a>
+                <a href="positioning.html">Positioning</a>
+                <a href="normalize-reset.html">Normalize / Reset</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header">
+            <p class="page-intro">
+                Цей міні-проєкт показує основні прийоми роботи з HTML-блоками,
+                властивостями <code class="code-inline">display</code>,
+                <code class="code-inline">box-sizing</code>, обтіканням
+                <code class="code-inline">float</code>, переповненням
+                <code class="code-inline">overflow</code>, позиціонуванням
+                і різницею між <strong>normalize.css</strong> та
+                <strong>reset.css</strong>.
+            </p>
+        </section>
+
+        <section class="cards-grid">
+            <article class="card">
+                <h2 class="card-title">1. Block &amp; Inline</h2>
+                <p class="card-text">
+                    Порівняння поведінки <code class="code-inline">&lt;div&gt;</code> та
+                    <code class="code-inline">&lt;span&gt;</code>, а також базових
+                    блокових та інлайнових елементів.
+                </p>
+                <a class="card-link" href="blocks-inline.html">Відкрити сторінку</a>
+            </article>
+
+            <article class="card">
+                <h2 class="card-title">2. Display &amp; Box-Sizing</h2>
+                <p class="card-text">
+                    Експерименти з<br>
+                    <code class="code-inline">display: block</code>,<br>
+                    <code class="code-inline">inline-block</code>,
+                    <code class="code-inline">flex</code> та порівняння
+                    <code class="code-inline">content-box</code> /
+                    <code class="code-inline">border-box</code>.
+                </p>
+                <a class="card-link" href="display-box-sizing.html">Відкрити сторінку</a>
+            </article>
+
+            <article class="card">
+                <h2 class="card-title">3. Float &amp; Clear</h2>
+                <p class="card-text">
+                    Обтікання елементів за допомогою
+                    <code class="code-inline">float</code> та контроль обтікання
+                    через <code class="code-inline">clear</code>.
+                </p>
+                <a class="card-link" href="float-clear.html">Відкрити сторінку</a>
+            </article>
+
+            <article class="card">
+                <h2 class="card-title">4. Overflow</h2>
+                <p class="card-text">
+                    Поведінка контейнерів з обмеженими розмірами і різні варіанти
+                    <code class="code-inline">overflow</code>.
+                </p>
+                <a class="card-link" href="overflow.html">Відкрити сторінку</a>
+            </article>
+
+            <article class="card">
+                <h2 class="card-title">5. Positioning</h2>
+                <p class="card-text">
+                    Порівняння <code class="code-inline">static</code>,
+                    <code class="code-inline">relative</code>,
+                    <code class="code-inline">absolute</code>,
+                    <code class="code-inline">fixed</code> і
+                    <code class="code-inline">sticky</code>.
+                </p>
+                <a class="card-link" href="positioning.html">Відкрити сторінку</a>
+            </article>
+
+            <article class="card">
+                <h2 class="card-title">6. Normalize &amp; Reset</h2>
+                <p class="card-text">
+                    Тестування <strong>normalize.css</strong> та простого
+                    <strong>reset.css</strong> з живим перемикачем і текстовим
+                    поясненням експерименту.
+                </p>
+                <a class="card-link" href="normalize-reset.html">Відкрити сторінку</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">CSS Layout Lab</p>
+    </footer>
+</div>
+</body>
+</html>

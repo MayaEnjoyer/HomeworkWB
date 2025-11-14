@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Display &amp; Box-sizing – CSS Layout Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">CSS</div>
+                <div class="brand-text">
+                    <span class="brand-title">CSS Layout Lab</span>
+                    <span class="brand-subtitle">Display &amp; Box-sizing</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="blocks-inline.html">Block vs Inline</a>
+                <a href="float-clear.html">Float &amp; Clear</a>
+                <a href="overflow.html">Overflow</a>
+                <a href="positioning.html">Positioning</a>
+                <a href="normalize-reset.html">Normalize / Reset</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header">
+            <h1 class="page-title">Display &amp; Box-sizing</h1>
+            <p class="page-intro">
+                Тут ми експериментуємо з різними значеннями
+                <code class="code-inline">display</code> і дивимося, як
+                <code class="code-inline">box-sizing</code> змінює розрахунок
+                розміру блоків.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 1</div>
+            <h2 class="section-title">Варіанти display</h2>
+            <p class="section-subtitle">
+                Однакові елементи поводяться по-різному залежно від значення
+                <code class="code-inline">display</code>.
+            </p>
+
+            <div class="demo-area">
+                <div class="display-grid">
+                    <div class="display-row display-row--block">
+                        <div class="display-row-header">
+                            <span>Блокове розташування</span>
+                            <span class="display-badge">display: block</span>
+                        </div>
+                        <div class="display-items">
+                            <div class="display-item">Перший блок</div>
+                            <div class="display-item">Другий блок</div>
+                            <div class="display-item">Третій блок</div>
+                        </div>
+                    </div>
+
+                    <div class="display-row display-row--inline-block">
+                        <div class="display-row-header">
+                            <span>Інлайнові блоки</span>
+                            <span class="display-badge">display: inline-block</span>
+                        </div>
+                        <div class="display-items">
+                            <div class="display-item">Inline-block 1</div>
+                            <div class="display-item">Inline-block 2</div>
+                            <div class="display-item">Inline-block 3</div>
+                            <div class="display-item">Inline-block 4</div>
+                        </div>
+                    </div>
+
+                    <div class="display-row display-row--flex">
+                        <div class="display-row-header">
+                            <span>Flex-контейнер</span>
+                            <span class="display-badge">display: flex</span>
+                        </div>
+                        <div class="display-items">
+                            <div class="display-item">Flex item 1</div>
+                            <div class="display-item">Flex item 2</div>
+                            <div class="display-item">Flex item 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 2</div>
+            <h2 class="section-title">box-sizing: content-box vs border-box</h2>
+            <p class="section-subtitle">
+                Обидві коробки мають однакове значення
+                <code class="code-inline">width: 200px</code>, але різний
+                <code class="code-inline">box-sizing</code>, тому видима ширина
+                відрізняється.
+            </p>
+
+            <div class="demo-area">
+                <div class="box-sizing-grid">
+                    <div class="box-demo">
+                        <h3 class="box-demo-title">box-sizing: content-box (за замовчуванням)</h3>
+                        <div class="box-demo-inner">
+                            <div class="box-demo-measured box-demo-measured--content">
+                                Ця коробка шириною <strong>200px</strong>, але до цієї ширини
+                                <em>не входять</em> рамка і відступи.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-demo">
+                        <h3 class="box-demo-title">box-sizing: border-box</h3>
+                        <div class="box-demo-inner">
+                            <div class="box-demo-measured box-demo-measured--border">
+                                Тут та сама ширина <strong>200px</strong>, але тепер у неї
+                                <em>входять</em> рамка і відступи, тому реальна коробка
+                                виглядає компактніше.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="experiment-text">
+                    У реальних проєктах найчастіше встановлюють
+                    <code class="code-inline">box-sizing: border-box</code> глобально
+                    для всіх елементів — так простіше контролювати макет, бо
+                    <strong>задана ширина включає рамку та падінги</strong>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">Display &amp; Box-sizing • CSS Layout Lab</p>
+    </footer>
+</div>
+</body>
+</html>

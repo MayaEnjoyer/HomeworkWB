@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Positioning – CSS Layout Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">CSS</div>
+                <div class="brand-text">
+                    <span class="brand-title">CSS Layout Lab</span>
+                    <span class="brand-subtitle">Positioning</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="blocks-inline.html">Block vs Inline</a>
+                <a href="display-box-sizing.html">Display &amp; Box</a>
+                <a href="float-clear.html">Float &amp; Clear</a>
+                <a href="overflow.html">Overflow</a>
+                <a href="normalize-reset.html">Normalize / Reset</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header">
+            <h1 class="page-title">Positioning</h1>
+            <p class="page-intro">
+                Порівнюємо <code class="code-inline">static</code>,
+                <code class="code-inline">relative</code>,
+                <code class="code-inline">absolute</code>,
+                <code class="code-inline">fixed</code> і
+                <code class="code-inline">sticky</code> на практичних прикладах.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 1</div>
+            <h2 class="section-title">static, relative, absolute</h2>
+            <p class="section-subtitle">
+                Усі три елементи належать одному контейнеру, але кожен позиціонується
+                по-своєму.
+            </p>
+
+            <div class="demo-area">
+                <div class="position-grid">
+                    <div class="position-box">
+                        <strong>Контейнер</strong> має
+                        <code class="code-inline">position: relative</code>, щоб елемент з
+                        <code class="code-inline">absolute</code> привʼязувався саме до нього.
+                        <div class="position-stage">
+                            <span class="pos-chip pos-chip--static">static</span>
+                            <span class="pos-chip pos-chip--relative">relative (зсунений)</span>
+                            <span class="pos-chip pos-chip--absolute">absolute в куті</span>
+                        </div>
+                    </div>
+
+                    <div class="position-box">
+                        <p>
+                            <strong>static</strong> — позиція за замовчуванням, елемент
+                            просто йде в потоці.
+                        </p>
+                        <p>
+                            <strong>relative</strong> — елемент лишається в потоці, але ми
+                            можемо злегка зсунути його відносно його «нормального» місця.
+                        </p>
+                        <p>
+                            <strong>absolute</strong> — елемент забирається з потоку і
+                            позиціонується відносно найближчого предка з
+                            <code class="code-inline">position: relative</code>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 2</div>
+            <h2 class="section-title">fixed vs sticky</h2>
+            <p class="section-subtitle">
+                Порівняємо елемент, який «прикріплений» до вікна (fixed), із тим,
+                що прилипає тільки всередині свого контейнера (sticky).
+            </p>
+
+            <div class="demo-area">
+                <div class="fixed-vs-sticky">
+                    <div class="fixed-note">
+                        <p>
+                            <strong>Fixed-елемент</strong> завжди привʼязаний до вікна
+                            браузера. Навіть якщо прокручувати сторінку, він лишається
+                            внизу справа.
+                        </p>
+                        <p>
+                            У цьому прикладі це маленька кнопка-підказка
+                            «fixed helper» в правому нижньому куті екрана.
+                        </p>
+                    </div>
+
+                    <div class="sticky-note-container">
+                        <p>
+                            <strong>Sticky-елемент</strong> прилипає до верхнього краю
+                            свого прокручуваного контейнера, але як тільки контейнер
+                            вийде з області видимості, sticky-елемент також зникне.
+                        </p>
+                        <div class="sticky-scroll">
+                            <div class="sticky-chip">sticky всередині блоку</div>
+                            <p>
+                                Прокручуючи цей блок, можемо побачити що зелений «sticky»-чіп
+                                залишається зверху, доки користувач всередині цього контейнера.
+                            </p>
+                            <p>
+                                Це зручно для фіксації заголовків колонок, міні-меню
+                                всередині картки або панелей фільтрів у довгих списках.
+                            </p>
+                            <p>
+                                На відміну від <code class="code-inline">fixed</code>, sticky
+                                не привʼязаний до всього вікна, лише до батьківського блоку.
+                            </p>
+                            <p>
+                                Таким чином, <strong>fixed</strong> більше підходить
+                                для глобальної навігації/кнопок, а
+                                <strong>sticky</strong> — для локального контексту.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">Positioning • CSS Layout Lab</p>
+    </footer>
+</div>
+</body>
+</html>

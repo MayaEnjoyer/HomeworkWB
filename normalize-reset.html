@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Normalize vs Reset – CSS Layout Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link id="normalizeStylesheet" rel="stylesheet" href="css/normalize.css" disabled>
+    <link id="resetStylesheet" rel="stylesheet" href="css/reset.css" disabled>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">CSS</div>
+                <div class="brand-text">
+                    <span class="brand-title">CSS Layout Lab</span>
+                    <span class="brand-subtitle">Normalize vs Reset</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="blocks-inline.html">Block vs Inline</a>
+                <a href="display-box-sizing.html">Display &amp; Box</a>
+                <a href="float-clear.html">Float &amp; Clear</a>
+                <a href="overflow.html">Overflow</a>
+                <a href="positioning.html">Positioning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header">
+            <h1 class="page-title">Normalize.css vs Reset.css</h1>
+            <p class="page-intro">
+                На цій сторінці можна переключатися між «без додаткових стилів»,
+                <strong>normalize.css</strong> та класичним <strong>Meyer reset.css</strong>,
+                щоб порівняти вигляд базових елементів.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо</div>
+            <h2 class="section-title">Порівняння базових стилів</h2>
+            <p class="section-subtitle">
+                Вибери режим, щоб побачити, як змінюються відступи заголовків,
+                списки та шрифти.
+            </p>
+
+            <div class="demo-area">
+                <div class="normalize-controls">
+                    <button class="normalize-button normalize-button--active" data-mode="none">
+                        Без normalize/reset
+                    </button>
+                    <button class="normalize-button" data-mode="normalize">
+                        Підключити normalize.css
+                    </button>
+                    <button class="normalize-button" data-mode="reset">
+                        Підключити reset.css
+                    </button>
+                </div>
+
+                <div class="normalize-sample">
+                    <h1>Заголовок H1</h1>
+                    <p>
+                        Це звичайний абзац з текстом. У різних режимах він може мати різні
+                        відступи згори/знизу, а також злегка інший розмір шрифту.
+                    </p>
+                    <p>
+                        Нижче наведений невеликий список. Подивись, як змінюється стиль
+                        маркерів і відступи зліва.
+                    </p>
+                    <ul>
+                        <li>Перший пункт списку</li>
+                        <li>Другий пункт списку</li>
+                        <li>Третій пункт списку</li>
+                    </ul>
+                </div>
+
+                <p class="experiment-text">
+                    <strong>Опис дослідження:</strong><br />
+                    Без додаткових файлів стилізації кожен браузер застосовує свої
+                    стандартні відступи до заголовків, абзаців і списків, тому
+                    сторінка може виглядати по-різному. При підключенні
+                    <strong>normalize.css</strong> відмінності між браузерами стають
+                    менш помітними, але корисні стандартні стилі зберігаються.
+                    При підключенні <strong>reset.css</strong> майже всі базові
+                    відступи та оформлення елементів обнуляються — усе стає більш
+                    голим, і розробник повністю контролюю вигляд сторінки через власні CSS-класи.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">Normalize vs Reset • CSS Layout Lab</p>
+    </footer>
+</div>
+
+<script>
+    (function () {
+        const normalizeLink = document.getElementById('normalizeStylesheet');
+        const resetLink = document.getElementById('resetStylesheet');
+        const buttons = document.querySelectorAll('.normalize-button');
+
+        function setMode(mode) {
+            if (mode === 'normalize') {
+                normalizeLink.disabled = false;
+                resetLink.disabled = true;
+            } else if (mode === 'reset') {
+                normalizeLink.disabled = true;
+                resetLink.disabled = false;
+            } else {
+                normalizeLink.disabled = true;
+                resetLink.disabled = true;
+            }
+
+            buttons.forEach(btn => {
+                if (btn.dataset.mode === mode) {
+                    btn.classList.add('normalize-button--active');
+                } else {
+                    btn.classList.remove('normalize-button--active');
+                }
+            });
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                setMode(btn.dataset.mode);
+            });
+        });
+    })();
+</script>
+</body>
+</html>

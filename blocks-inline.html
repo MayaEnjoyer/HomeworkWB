@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Block vs Inline – CSS Layout Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">CSS</div>
+                <div class="brand-text">
+                    <span class="brand-title">Layout Lab</span>
+                    <span class="brand-subtitle">Block vs Inline</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="display-box-sizing.html">Display &amp; Box</a>
+                <a href="float-clear.html">Float &amp; Clear</a>
+                <a href="overflow.html">Overflow</a>
+                <a href="positioning.html">Positioning</a>
+                <a href="normalize-reset.html">Normalize / Reset</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header">
+            <h1 class="page-title">Block vs Inline elements</h1>
+            <p class="page-intro">
+                На цій сторінці ми порівнюємо поведінку блокових елементів
+                (<code class="code-inline">&lt;div&gt;</code>) та інлайнових
+                (<code class="code-inline">&lt;span&gt;</code>), щоб побачити,
+                як вони займають простір і впливають на потік документа.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 1</div>
+            <h2 class="section-title">Блокові елементи (&lt;div&gt;)</h2>
+            <p class="section-subtitle">
+                Блоковий елемент за замовчуванням займає всю доступну ширину
+                і починається з нового рядка.
+            </p>
+            <div class="demo-area">
+                <p class="demo-caption">
+                    Нижче три блоки <code class="code-inline">&lt;div&gt;</code>.
+                    Кожен починається з нового рядка і розтягується на всю ширину контейнера.
+                </p>
+                <div class="block-row">
+                    <div class="block-demo-box">Це перший блоковий елемент (div).</div>
+                    <div class="block-demo-box">Це другий блоковий елемент (div).</div>
+                    <div class="block-demo-box">Це третій блоковий елемент (div).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 2</div>
+            <h2 class="section-title">Інлайнові елементи (&lt;span&gt;)</h2>
+            <p class="section-subtitle">
+                Інлайнові елементи розташовуються <em>в одному рядку</em> разом з текстом
+                і не ламають потік так, як блокові.
+            </p>
+            <div class="demo-area">
+                <p class="demo-caption">
+                    Тут кілька <code class="code-inline">&lt;span&gt;</code> всередині
+                    одного абзацу. Вони не займають всю ширину та можуть стояти поруч.
+                </p>
+                <p class="inline-demo-text">
+                    Звичайний текст абзацу, в якому
+                    <span class="inline-demo-span">виділено ключові слова</span>
+                    за допомогою
+                    <span class="inline-demo-span">&lt;span&gt;</span>. Ці елементи
+                    <span class="inline-demo-span">розташовуються в одному рядку</span>,
+                    поки вистачає ширини.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">Block vs Inline • CSS Layout Lab</p>
+    </footer>
+</div>
+</body>
+</html>

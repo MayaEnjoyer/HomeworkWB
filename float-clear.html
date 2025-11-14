@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Float &amp; Clear – CSS Layout Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">CSS</div>
+                <div class="brand-text">
+                    <span class="brand-title">CSS Layout Lab</span>
+                    <span class="brand-subtitle">Float &amp; Clear</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="blocks-inline.html">Block vs Inline</a>
+                <a href="display-box-sizing.html">Display &amp; Box</a>
+                <a href="overflow.html">Overflow</a>
+                <a href="positioning.html">Positioning</a>
+                <a href="normalize-reset.html">Normalize / Reset</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header">
+            <h1 class="page-title">Float &amp; Clear</h1>
+            <p class="page-intro">
+                На цій сторінці ми створюємо кілька елементів з
+                <code class="code-inline">float</code> та керуємо обтіканням
+                через <code class="code-inline">clear</code>.
+            </p>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 1</div>
+            <h2 class="section-title">Три «плаваючі» блоки</h2>
+            <p class="section-subtitle">
+                Елементи з <code class="code-inline">float: left</code> стають
+                в один ряд, доки вистачає ширини, а інший контент «обтікає» їх.
+            </p>
+
+            <div class="demo-area float-demo">
+                <div class="float-cards">
+                    <div class="float-card">Float card 1<br /><small>float: left</small></div>
+                    <div class="float-card">Float card 2<br /><small>float: left</small></div>
+                    <div class="float-card">Float card 3<br /><small>float: left</small></div>
+                </div>
+                <div class="float-clear-target">
+                    Цей елемент знаходиться після блоків з float, але завдяки
+                    «clearfix» контейнер розтягується під ними і не «зсувається» вгору.
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <div class="demo-label">Демо 2</div>
+            <h2 class="section-title">Обтікання текстом та clear</h2>
+            <p class="section-subtitle">
+                Зробимо «картинку» зліва, текст справа, а потім елемент, який
+                починається нижче обтікання завдяки <code class="code-inline">clear</code>.
+            </p>
+
+            <div class="demo-area float-demo">
+                <div class="float-image-container">
+                    <div class="float-image-box">
+                        float<br />box
+                    </div>
+                    <p>
+                        Цей текст обтікає «картинку» зліва. У реальних макетах
+                        так часто роблять, коли зображення повинно бути вбудованим
+                        у текстовий блок. Поки висоти тексту вистачає, він заповнює
+                        простір праворуч і нижче плаваючого елемента.
+                    </p>
+                    <p class="text-after-clear">
+                        Цей абзац має <code class="code-inline">clear: both</code>,
+                        тому він починається <strong>після</strong> плаваючого
+                        елемента і вже не обтікає його.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">Float &amp; Clear • CSS Layout Lab</p>
+    </footer>
+</div>
+</body>
+</html>
